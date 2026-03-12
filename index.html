@@ -105,7 +105,7 @@
     <h1>Verify Manufacturer Details</h1>
 
     <label for="batch">Enter full Batch No.</label>
-    <input type="text" id="batch" placeholder="e.g. SPS01NS1234" />
+    <input type="text" id="batch" placeholder="e.g. SPS01123456" />
 
     <button onclick="showDetails()">View Details</button>
 
@@ -114,7 +114,7 @@
     <div class="footer">
       Packed for Bluexim (Satara Spices)<br/>
       Country of Origin: India<br/>
-      For queries: 9769455099
+      For queries: Call or Whatsapp +91 9769455099
     </div>
 
   </div>
@@ -124,7 +124,7 @@
       const batchValue = document.getElementById("batch").value.toUpperCase();
       const resultDiv = document.getElementById("result");
 
-      if (batchValue.includes("NS")) {
+      if (batchValue.includes("SPS")) {
         resultDiv.style.display = "block";
         resultDiv.innerHTML = `
           <strong>Manufactured by:</strong><br>
@@ -135,6 +135,10 @@
 
           <strong>FSSAI License No:</strong><br>
           10018022007595
+
+          <strong>Lab Test Report:</strong><br>
+Kindly email us with batch number and product name at 
+<a href="mailto:info@sataraspices.com">info@sataraspices.com</a> to receive the lab test report.
         `;
       } else {
         resultDiv.style.display = "block";
